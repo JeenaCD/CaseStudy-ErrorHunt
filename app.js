@@ -18,15 +18,16 @@ const app = new express;
 app.set('views','./src/views'); 
 app.set('view engine','ejs'); 
 
-var corsOptions = {
-    "origin": "*",
-  "methods": "GET,HEAD,PUT,PATCH,POST,DELETE",
-  "preflightContinue": false,
-  "optionsSuccessStatus": 204
-}
+// var corsOptions = {
+//     "origin": "*",
+//   "methods": "GET,HEAD,PUT,PATCH,POST,DELETE",
+//   "preflightContinue": false,
+//   "optionsSuccessStatus": 204
+// }
 
 app.use(bodyParser.urlencoded({extended:true}));
-app.use(cors(corsOptions));
+// app.use(cors(corsOptions));
+app.use(cors());
 app.use(express.json());
 app.use(express.static(path.join(__dirname , '/public'))); 
 app.use(cookieParser());
@@ -49,7 +50,7 @@ app.get('/',function(req,res){
 
 
 
-const port = process.env.PORT || 5000;
+const port = process.env.PORT || 3000;
 app.listen(port,()=>{
     console.log("Server Ready on 5000"); // Part #1 Point 5
 });
