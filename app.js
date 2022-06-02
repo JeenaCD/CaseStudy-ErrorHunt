@@ -49,7 +49,7 @@ app.get('/',function(req,res){
 
 
 
-
-app.listen(5000,()=>{
+const port = process.env.PORT || 3000;
+app.listen(port,()=>{
     console.log("Server Ready on 5000"); // Part #1 Point 5
 });
