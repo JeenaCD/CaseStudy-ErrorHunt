@@ -1,4 +1,4 @@
-const nav= [      // Part #2 Point 6
+const nav= [      
     {
         link:"/books",
         title:"Books"
