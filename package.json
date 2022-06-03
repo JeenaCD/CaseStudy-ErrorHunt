@@ -17,7 +17,8 @@
   },
 
   "scripts": {
-    "start": "nodemon app.js" 
+    "start": "nodemon app.js" ,
+    "_comment" :"// Part #1 Point 1"
   },
   "author": "aiswarya",
   "license": "ISC"
